@@ -7,6 +7,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 
 
@@ -22,8 +24,9 @@ def pytest_addoption(parser):
 def setup(request):
     browser_Name = request.config.getoption("browser_Name")
     if browser_Name == "chrome":
-        service_obj = Service(r"C:\Users\Lenovo\PycharmProjects\SeleniumTest\Browsers\chromedriver.exe")
-        driver = webdriver.Chrome(service=service_obj)
+        #service_obj = Service(r"C:\Users\Lenovo\PycharmProjects\SeleniumTest\Browsers\chromedriver.exe")
+        driver = webdriver.Chrome(ChromeDriverManager().install())
+        #driver = webdriver.Chrome(service=service_obj)
         #driver.get("https://rahulshettyacademy.com/angularpractice/")
         #driver.get("https://www.myntra.com/")
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
