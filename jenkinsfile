@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Setup') {
+            steps {
+                // Clone the repository containing the pytest framework
+                git 'https://github.com/username/repo.git'
+                // Install the necessary dependencies
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                // Run pytest with the specified options
+                sh 'pytest'
+            }   
+        }
+
+        stage('Cleanup') {
+            steps {
+                // Remove any temporary files or directories created during the test run
+                sh 'rm -rf tmp/'
+            }
+        }
+    }
+}
