@@ -16,11 +16,6 @@ pipeline {
                 // Run pytest with the specified options
                 sh 'pytest -k unsuc --html=report.tml'
             }
-            post {
-                // Archive the test results
-                archiveArtifacts 'report.tml'
-                // Publish the test results
-            }
         }
 
         stage('Cleanup') {
