@@ -17,7 +17,7 @@ pipeline {
             steps {
                 dir('ptests/') {
                     // Run the Pytest command
-                    bat 'pytest'
+                    bat 'pytest --recursive'
                 }
             }
          }
