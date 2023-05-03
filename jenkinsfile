@@ -17,16 +17,9 @@ pipeline {
             steps {
                 dir('ptests/') {
                     // Run the Pytest command
-                    bat 'dir'
+                    bat 'pytest'
                 }
             }
-            post {
-                // Archive the test reports and HTML report
-                always {
-                    junit 'reports/**/*.xml'
-                    archiveArtifacts artifacts: 'report.html', fingerprint: true
-                }
-            }
-        }
+         }
     }
 }
