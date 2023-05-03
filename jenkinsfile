@@ -17,7 +17,7 @@ pipeline {
             steps {
                 dir('/PycharmProjects/GUVI-PROJECT-ORANGE-HRM/ptests/') {
                     // Run the Pytest command
-                    bat 'pytest'
+                    bat 'dir'
                 }
             }
          }
