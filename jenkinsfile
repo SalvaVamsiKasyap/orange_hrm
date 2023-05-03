@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from Git repository
-                git branch: 'main', url: 'https://github.com/your-repo.git'
+                git branch: 'main', url: 'https://github.com/SalvaVamsiKasyap/orange_hrm.git'
             }
         }
         stage('Setup') {
