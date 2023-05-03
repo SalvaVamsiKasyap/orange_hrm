@@ -5,7 +5,7 @@ pipeline {
         stage('Setup') {
             steps {
                 // Clone the repository containing the pytest framework
-                git 'https://github.com/username/repo.git'
+                git 'https://github.com/SalvaVamsiKasyap/orange_hrm.git'
                 // Install the necessary dependencies
                 sh 'pip install -r requirements.txt'
             }
