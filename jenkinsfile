@@ -15,8 +15,10 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                // Run the Pytest tests with HTML report generation
-                bat 'pytest test_orange_hrm.py'
+                dir('ptests/') {
+                    // Run the Pytest command
+                    bat 'pytest test_orange_hrm.py'
+                }
             }
             post {
                 // Archive the test reports and HTML report
