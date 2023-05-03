@@ -17,12 +17,5 @@ pipeline {
                 sh 'pytest -k unsuc --html=report.tml'
             }
         }
-
-        stage('Cleanup') {
-            steps {
-                // Remove any temporary files or directories created during the test run
-                sh 'rm -rf tmp/'
-            }
-        }
     }
 }
