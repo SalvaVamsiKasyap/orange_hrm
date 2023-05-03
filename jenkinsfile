@@ -18,6 +18,7 @@ pipeline {
                    // Run the Pytest command
                    bat 'dir'
                    dir('/ptests'){
+                    bat 'dir'
                     bat 'pytest -k unsuc --html=report.html'
                     }
               }
