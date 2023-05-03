@@ -1,14 +1,30 @@
 pipeline {
     agent any
-
     stages {
-        stage('Setup') {
+        stage('Checkout') {
             steps {
-                // Clone the repository containing the pytest framework
-                git 'https://github.com/SalvaVamsiKasyap/orange_hrm.git'
-                sh 'pytest'
+                // Checkout the code from Git repository
+                git branch: 'main', url: 'https://github.com/your-repo.git'
             }
         }
-
+        stage('Setup') {
+            steps {
+                // Install the required dependencies
+                sh 'pip install -r requirements.txt'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                // Run the Pytest tests with HTML report generation
+                sh 'pytest --html=report.html'
+            }
+            post {
+                // Archive the test reports and HTML report
+                always {
+                    junit 'reports/**/*.xml'
+                    archiveArtifacts artifacts: 'report.html', fingerprint: true
+                }
+            }
+        }
     }
 }
