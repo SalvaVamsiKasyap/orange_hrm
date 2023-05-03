@@ -10,6 +10,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 // Run the Pytest tests with HTML report generation
+                sh 'cd ptests'
                 sh 'pytest --html=report.html'
             }
             post {
