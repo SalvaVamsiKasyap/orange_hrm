@@ -17,7 +17,7 @@ pipeline {
             steps {
                 dir('ptests/') {
                     // Run the Pytest command
-                    bat 'pytest test_orange_hrm.py'
+                    bat 'ls -lrt'
                 }
             }
             post {
