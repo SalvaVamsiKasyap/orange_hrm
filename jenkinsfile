@@ -17,6 +17,9 @@ pipeline {
             steps {
                    // Run the Pytest command
                    bat 'dir'
+                   dir(/ptests){
+                      bat 'dir'
+                   }
               }
          }
     }
