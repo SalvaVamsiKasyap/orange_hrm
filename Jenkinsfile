@@ -13,6 +13,7 @@ pipeline {
             steps {
                 // Checkout the code from Git repository
                 git branch: 'main', url: 'https://github.com/SalvaVamsiKasyap/orange_hrm.git'
+                bat 'git --version'
                 
             }
         }
