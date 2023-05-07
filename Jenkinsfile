@@ -27,11 +27,11 @@ pipeline {
             steps {
                    // Run the Pytest command
                    bat 'dir'
-                   bat 'git init'       
-                   dir('/ptests') {
+                   //bat 'git init'       
+                   //dir('/ptests') {
                     // Run the Pytest command
-                    bat 'git init'
-                    bat 'pytest'
+                    //bat 'git init'
+                    //bat 'pytest'
                     //bat 'pytest -k unsuc --html=report.html'
                 }
               }
