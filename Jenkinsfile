@@ -33,7 +33,7 @@ pipeline {
                     //bat 'git init'
                     //bat 'pytest'
                     //bat 'pytest -k unsuc --html=report.html'
-                }
+                //}
               }
          }
     }
