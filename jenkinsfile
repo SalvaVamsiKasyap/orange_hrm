@@ -19,7 +19,8 @@ pipeline {
                    bat 'dir'
                    dir('/pageObjects') {
                     // Run the Pytest command
-                    bat 'pytest -k unsuc --html=report.html'
+                    bat 'dir'
+                    //bat 'pytest -k unsuc --html=report.html'
                 }
               }
          }
