@@ -1,6 +1,14 @@
 pipeline {
     agent any
+    environment {
+    GITHUB_CREDENTIALS = credentials('github-token')
+    }
     stages {
+        stage('Clone repository') {
+      steps {
+        git branch: 'main', credentialsId: env.GITHUB_CREDENTIALS, url: 'https://github.com/SalvaVamsiKasyap/orange_hrm.git'
+      }
+    }
         stage('Checkout') {
             steps {
                 // Checkout the code from Git repository
