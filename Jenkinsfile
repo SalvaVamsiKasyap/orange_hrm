@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-    GITHUB_CREDENTIALS = credentials('github-token')
+    GITHUB_CREDENTIALS = credentials('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')
     }
     stages {
         stage('Clone repository') {
