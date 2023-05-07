@@ -16,16 +16,16 @@ pipeline {
                 
             }
         }
-        stage('Setup') {
-            steps {
+        //stage('Setup') {
+            //steps {
                 // Install the required dependencies
                 //bat 'pip install -r requirements.txt'
                 //bat 'git clone https://github.com/SalvaVamsiKasyap/orange_hrm.git'
-                bat 'git --version'
-            }
-        }
-        stage('Run Tests') {
-            steps {
+                //bat 'git --version'
+            //}
+        //}
+        //stage('Run Tests') {
+            //steps {
                    // Run the Pytest command
                    //bat 'dir'
                    //bat 'more Jenkinsfile'
@@ -36,7 +36,7 @@ pipeline {
                     //bat 'pytest'
                     //bat 'pytest -k unsuc --html=report.html'
                 //}
-              }
-         }
+             // }
+         //}
     }
 }
