@@ -27,7 +27,7 @@ pipeline {
             steps {
                    // Run the Pytest command
                    bat 'dir'
-                   bat 'cat Jenkinsfile'
+                   bat 'more Jenkinsfile'
                    //bat 'git init'       
                    //dir('/ptests') {
                     // Run the Pytest command
