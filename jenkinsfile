@@ -18,7 +18,7 @@ pipeline {
             steps {
                    // Run the Pytest command
                    bat 'dir'
-                   dir('/pageObjects') {
+                   dir('/orange_hrm') {
                     // Run the Pytest command
                     bat 'dir'
                     //bat 'pytest -k unsuc --html=report.html'
