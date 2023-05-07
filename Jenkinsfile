@@ -30,7 +30,7 @@ pipeline {
                    bat 'git init'       
                    dir('/ptests') {
                     // Run the Pytest command
-                    bat 'dir'
+                    bat 'pytest'
                     //bat 'pytest -k unsuc --html=report.html'
                 }
               }
