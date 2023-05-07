@@ -19,8 +19,9 @@ pipeline {
         stage('Setup') {
             steps {
                 // Install the required dependencies
-                bat 'pip install -r requirements.txt'
+                //bat 'pip install -r requirements.txt'
                 //bat 'git clone https://github.com/SalvaVamsiKasyap/orange_hrm.git'
+                bat 'git --version'
             }
         }
         stage('Run Tests') {
