@@ -5,26 +5,27 @@ pipeline {
             steps {
                 // Checkout the code from Git repository
                 git branch: 'main', url: 'https://github.com/SalvaVamsiKasyap/orange_hrm.git'
+                bat 'dir'
             }
         }
-        stage('Setup') {
-            steps {
+        //stage('Setup') {
+            //steps {
                 // Install the required dependencies
-                bat 'pip install -r requirements.txt'
+                //bat 'pip install -r requirements.txt'
                 //bat 'git clone https://github.com/SalvaVamsiKasyap/orange_hrm.git'
-            }
-        }
-        stage('Run Tests') {
-            steps {
+            //}
+        //}
+        //stage('Run Tests') {
+            //steps {
                    // Run the Pytest command
-                   bat 'dir'
-                   bat 'git init'       
-                   dir('/ptests') {
+                   //bat 'dir'
+                   //bat 'git init'       
+                   //dir('/ptests') {
                     // Run the Pytest command
-                    bat 'dir'
+                    //bat 'dir'
                     //bat 'pytest -k unsuc --html=report.html'
-                }
-              }
-         }
+                //}
+              //}
+         //}
     }
 }
